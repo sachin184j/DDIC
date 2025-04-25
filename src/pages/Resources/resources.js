@@ -42,7 +42,7 @@ const Resources = () => {
               <p>{pageContent.content}</p>
             </div>
             <div className="col-sm-4 text-end">
-              <ViewAllButton link="/resources" label="View All" />
+              <ViewAllButton link="/job-openings" label="View All" />
             </div>
           </div>
 
