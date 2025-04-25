@@ -1,8 +1,47 @@
+@font-face {
+  font-family: "Stolzl-book";
+  src: url('./assets/fonts/Stolzl-Book.woff2') format('woff2'),
+       url('./assets/fonts/Stolzl-Book.woff') format('woff'),
+       url('./assets/fonts/Stolzl-Book.eot') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Stolzl-Regular";
+  src: url('./assets/fonts/Stolzl-Regular.woff2') format('woff2'),
+       url('./assets/fonts/Stolzl-Regular.woff') format('woff'),
+       url('./assets/fonts/Stolzl-Regular.eot') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Stolzl-Light";
+  src: url('./assets/fonts/Stolzl-Light.woff2') format('woff2'),
+       url('./assets/fonts/Stolzl-Light.woff') format('woff'),
+       url('./assets/fonts/Stolzl-Light.eot') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Stolzl-Medium";
+  src: url('./assets/fonts/Stolzl-Medium.woff2') format('woff2'),
+       url('./assets/fonts/Stolzl-Medium.woff') format('woff'),
+       url('./assets/fonts/Stolzl-Medium.eot') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Stolzl-bold";
+  src: url('./assets/fonts/Stolzl-Bold.woff2') format('woff2'),
+       url('./assets/fonts/Stolzl-Bold.woff') format('woff'),
+       url('./assets/fonts/Stolzl-Bold.eot') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Stolzl-Regular", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

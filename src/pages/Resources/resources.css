@@ -1,0 +1,82 @@
+.btn-primary {
+    font-family: "Stolzl Book";
+    background-color: #293578;
+    color: #fff;
+    border: none;
+    padding: 8px 40px 8px 15px;
+    line-height: initial;
+    text-align: left;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #fa5b26;
+    cursor: pointer;
+}
+.btn-primary:hover::after {
+    transform: translateX(4px);
+}
+.arrow {
+    color: #fff;
+    display: inline-block;
+    position: relative;
+}
+.arrow::after {
+    display: inline-block;
+    padding-left: 0.5rem;
+    content: "";
+    position: absolute;
+    right: 9px;
+    top: 10px;
+    width: 22px;
+    height: 17px;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/images/white-arrow.svg');
+    transition: transform 0.3s ease-out;
+}
+.resource-section h3 {
+    font-size: 3rem;
+    font-family: "Stolzl-Bold";
+    color: #000;
+}
+.resource-section p {
+    color: #4d4d4d;
+    font-size: 1rem;
+}
+.textWithLeftLine {
+    position: relative;
+    padding-left: 3rem;
+}
+.textWithLeftLine::before {
+    position: absolute;
+    z-index: 999;
+    display: block;
+    content: "";
+    width: 6px;
+    left: 4px;
+    top: 3px;
+    height: 50px;
+    background-color:#ff4b02;
+    transform: translateX(-50%);
+}
+.btn-secondary {
+    font-family: "Stolzl bold";
+    background-color: #fa5b26;
+    color: #fff;
+    border: none;
+    padding: 8px 40px 8px 15px;
+    line-height: initial;
+    text-align: left;
+    text-decoration: none;
+}
+.btn-secondary.arrow:hover {
+    color: #fff;
+    background-color: #293578;
+}
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #293578;
+    cursor: pointer;
+}
+.btn-secondary:hover::after {
+    transform: translateX(4px);
+}

@@ -1,0 +1,10 @@
+footer {
+    background-color: #293578;
+    color: #fff;
+    font-size: 12px;
+    padding: 1rem 0;
+}
+footer .d-grid .copyright p {
+    color: #fff;
+    margin-bottom: 0;
+}
