@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import BtnSecondary from '../components/btnSecondary';
+// import BtnSecondary from '../components/btnSecondary';
 
 const ResumeForm = ({ jobId }) => {
   const [file, setFile] = useState(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [setIsSubmitting] = useState(false);
 
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
@@ -13,7 +13,6 @@ const ResumeForm = ({ jobId }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Submit button clicked');  // Debugging line
 
     // Collect form data
     const firstName = e.target.firstName.value;
@@ -44,7 +43,6 @@ const ResumeForm = ({ jobId }) => {
     formData.append('job_id', jobId || 28); // Default jobId if none provided
     formData.append('resume', file);
 
-    console.log("Form data being sent: ", formData); // Debugging line
 
     // Submit the form data via axios
     setIsSubmitting(true);
