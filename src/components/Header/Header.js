@@ -4,7 +4,10 @@
   import HamburgerMenu from '../../assets/images/hamburger-menu.png';  // Replace with actual path
   import Resources from '../../pages/Resources/resources';
   import JobPage from '../../pages/jobPage2'; 
+<<<<<<< HEAD
   import CareerDetail from '../../pages/careerdetail';
+=======
+>>>>>>> 97a11ff81a807f7191e2f4bfbf2ce483c2b33dce
   import './Header.css';
 
   const Header = () => {
@@ -61,7 +64,10 @@
     <Route path="/services" element={<div>Services Page</div>} />
     <Route path="/Resources" element={<Resources />} />
     <Route path="/job-openings" element={<JobPage />} />
+<<<<<<< HEAD
     <Route path="/career-detail-page" element={<CareerDetail />} />
+=======
+>>>>>>> 97a11ff81a807f7191e2f4bfbf2ce483c2b33dce
     <Route path="/contact-us" element={<div>Contact Us Page</div>} />
   </Routes>
       </Router>

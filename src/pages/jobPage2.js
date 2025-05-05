@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import JobCard from '../components/JobCard';
+<<<<<<< HEAD
 import Pagination from '../components/pagination';
 import Footer from '../components/Footer/footer';
 import GetInTouch from '../components/getInTouch';
@@ -12,6 +13,13 @@ const JobPage = () => {
   const [rightData, setRightData] = useState(null);
   const [resources, setResources] = useState([]);
   const [loading, setLoading] = useState(true);
+=======
+import './jobPage2.css';
+
+const JobPage = () => {
+  const [leftData, setLeftData] = useState(null); // For left section data
+  const [rightData, setRightData] = useState(null); // For right section data
+>>>>>>> 97a11ff81a807f7191e2f4bfbf2ce483c2b33dce
 
   // Helper functions
   const stripHtmlTags = (html) => {
@@ -25,7 +33,11 @@ const JobPage = () => {
     return text.length > length ? text.slice(0, length) + '...' : text;
   };
 
+<<<<<<< HEAD
   // Fetch data for left and right sections
+=======
+  // Fetch data for both sections
+>>>>>>> 97a11ff81a807f7191e2f4bfbf2ce483c2b33dce
   const fetchData = async () => {
     try {
       const leftApiUrl = 'https://ddic.hgsinteractive.com/api/career-life-at-DDIC';
@@ -36,14 +48,20 @@ const JobPage = () => {
         axios.get(rightApiUrl),
       ]);
 
+<<<<<<< HEAD
       setLeftData(leftResponse.data[0]);
       setRightData(rightResponse.data);
+=======
+      setLeftData(leftResponse.data[0]); // Left section
+      setRightData(rightResponse.data);  // Right jobs
+>>>>>>> 97a11ff81a807f7191e2f4bfbf2ce483c2b33dce
     } catch (error) {
       console.error('Error fetching data:', error);
     }
   };
 
   useEffect(() => {
+<<<<<<< HEAD
     axios
       .get('https://ddic.hgsinteractive.com/api/home-resources')
       .then((response) => {
@@ -58,6 +76,8 @@ const JobPage = () => {
   
 
   useEffect(() => {
+=======
+>>>>>>> 97a11ff81a807f7191e2f4bfbf2ce483c2b33dce
     fetchData();
   }, []);
 
@@ -87,7 +107,11 @@ const JobPage = () => {
                       key={index}
                       title={job.field_heading?.[0]?.value || 'Untitled'}
                       description={truncateText(job.field_sub_text?.[0]?.processed || '')}
+<<<<<<< HEAD
                       link="/career-detail-page" // Replace with actual link if available
+=======
+                      link="#" // Replace with actual link if available
+>>>>>>> 97a11ff81a807f7191e2f4bfbf2ce483c2b33dce
                     />
                   ))
                 ) : (
@@ -100,6 +124,7 @@ const JobPage = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* Pagination and Resource Cards Section */}
       <section className="py-4 resource-detailSection">
@@ -167,6 +192,8 @@ const JobPage = () => {
       </section>
       <GetInTouch />
       <Footer />
+=======
+>>>>>>> 97a11ff81a807f7191e2f4bfbf2ce483c2b33dce
     </div>
   );
 };
