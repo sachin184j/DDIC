@@ -5,6 +5,9 @@ import ViewAllButton from '../../components/ViewAllButton';
 import './resources.css';
 import GetInTouch from '../../components/getInTouch';
 import Footer from '../../components/Footer/footer';
+import BtnSecondary from '../../components/btnSecondary'
+
+
 const Resources = () => {
   const [resources, setResources] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -42,7 +45,7 @@ const Resources = () => {
               <p>{pageContent.content}</p>
             </div>
             <div className="col-sm-4 text-end">
-              <ViewAllButton link="/resources" label="View All" />
+              <ViewAllButton link="/job-openings" label="View All" />
             </div>
           </div>
 
@@ -60,7 +63,7 @@ const Resources = () => {
                         <h5 className="owl-title">{item.field_sub_heading?.[0]?.value}</h5>
                       </div>
                       <p dangerouslySetInnerHTML={{ __html: item.body?.[0]?.summary || '' }}></p>
-                      <a className="btn-secondary arrow" href={item.path?.[0]?.alias || "#"}>Read More</a>
+                      <BtnSecondary href={item.path?.[0]?.alias || "#"} label="Read More" />
                     </div>
                   </div>
                 </div>

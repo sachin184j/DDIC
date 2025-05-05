@@ -1,0 +1,79 @@
+.product-filter {
+    border-bottom: 1px solid #ced4da;
+    padding: 0 0 10px 0;
+    margin: 0 0 3rem 0;
+}
+.product-filter .d-grid {
+    grid-template-columns: 250px 25px 250px 100px;
+    align-items: flex-start;
+    grid-gap: 30px;
+}
+form label {
+    color: #4d4d4d;
+}
+.product-filter .wrapperLine {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    position: relative;
+    top: 20px;
+}
+.product-filter .wrapperLine .or-separator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+}
+.product-filter .wrapperLine .or-separator .vertical-line {
+    border-left: 1px solid #c6c6c6;
+    flex-grow: 1;
+    width: 1px;
+}
+.product-filter .wrapperLine .or-separator .vertical-line {
+    border-left: 1px solid #c6c6c6;
+    flex-grow: 1;
+    width: 1px;
+}
+.form-select, .form-control {
+    color: #000;
+    border-radius: 0;
+}
+.product-filter .d-grid .btnSearch {
+    position: relative;
+    top: 25px;
+    display: inherit;
+}
+.btnSearch .btn-secondary {
+    font-family: "Stolzl Book";
+    background-color: #fa5b26;
+    color: #fff;
+    border: none;
+    padding: 8px 40px 8px 15px;
+    line-height: initial;
+    text-align: left;
+}
+.product-filter .d-grid .btnSearch .btn-secondary img {
+    position: absolute;
+    right: 10px;
+    width: auto;
+}
+.pagination {
+    margin-bottom: 0;
+    -webkit-justify-content: flex-end;
+}
+.pagination .page-item.active a.page-link {
+    color: #fa5b26;
+    background-color: unset;
+}
+.pagination .page-item.active>.page-link, .page-link.active{background-color: unset;}
+
+.pagination .page-item .page-link {
+    border: none;
+    font-family: "Stolzl-Bold";
+    color: #000;
+    border-radius: 0;
+}
+.pagination .page-item .page-link:hover {
+    background-color: #fa5b26;
+    color: #fff;
+}

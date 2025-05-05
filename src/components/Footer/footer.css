@@ -1,10 +1,28 @@
 footer {
     background-color: #293578;
     color: #fff;
-    font-size: 12px;
+    font-size: 14px;
     padding: 1rem 0;
+    
 }
 footer .d-grid .copyright p {
     color: #fff;
     margin-bottom: 0;
 }
+footer .d-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+footer .d-grid .social-icons ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: end;
+    -webkit-justify-content: flex-end;
+    margin: 0;
+}
+footer .d-grid .copyright a {
+   text-decoration: none;
+    color: #fff;
+}
+.social-icons ul li{padding: 0 8px;}

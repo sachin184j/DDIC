@@ -31,22 +31,22 @@ const Footer = () => {
           <div className="social-icons">
             <ul>
               <li>
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com" target="_blank" className="text-white" rel="noopener noreferrer">
                   <FaFacebook size={30} />
                 </a>
               </li>
               <li>
-                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.twitter.com" target="_blank" className="text-white" rel="noopener noreferrer">
                   <FaTwitter size={30} />
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com" target="_blank" className="text-white"  rel="noopener noreferrer">
                   <FaLinkedin size={30} />
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com" target="_blank" className="text-white" rel="noopener noreferrer">
                   <FaInstagram size={30} />
                 </a>
               </li>
