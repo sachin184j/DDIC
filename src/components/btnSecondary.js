@@ -1,16 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const btnSecondary = ({ link = "#", label = "View All" }) => {
+const BtnSecondary = ({ link = "#", label = "", type = "button", disabled = false }) => {
   return (
-    <div>
-      <Link to={link}>
-        <button className="btn-secondary arrow">
-          {label}
-        </button>
-      </Link>
-    </div>
+    <Link to={link}>
+      <button type={type} className="btn-secondary arrow" disabled={disabled}>
+        {label}
+      </button>
+    </Link>
   );
 };
 
-export default btnSecondary;
+export default BtnSecondary;
+

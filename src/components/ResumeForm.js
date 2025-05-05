@@ -8,11 +8,14 @@ const ResumeForm = ({ jobId }) => {
 
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
+    console.log('File selected:', e.target.files[0]); // Debugging line
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log('Submit button clicked');  // Debugging line
 
+    // Collect form data
     const firstName = e.target.firstName.value;
     const lastName = e.target.lastName.value;
     const email = e.target.email.value;
@@ -22,13 +25,13 @@ const ResumeForm = ({ jobId }) => {
     const workExperience = e.target.workExperience.value;
     const additionalInformation = e.target.additionalInformation.value;
 
-    if (!file) {
-      alert('Please upload your resume.');
+    // Check if any required fields are empty
+    if (!firstName || !lastName || !email || !phone || !country || !city || !workExperience || !file) {
+      alert('Please fill in all required fields and upload your resume.');
       return;
     }
 
-    setIsSubmitting(true);
-
+    // Prepare FormData
     const formData = new FormData();
     formData.append('first_name', firstName);
     formData.append('last_name', lastName);
@@ -38,17 +41,21 @@ const ResumeForm = ({ jobId }) => {
     formData.append('city', city);
     formData.append('work_experience', workExperience);
     formData.append('additional_information', additionalInformation);
-    formData.append('job_id', jobId || 28);
+    formData.append('job_id', jobId || 28); // Default jobId if none provided
     formData.append('resume', file);
 
+    console.log("Form data being sent: ", formData); // Debugging line
+
+    // Submit the form data via axios
+    setIsSubmitting(true);
     axios.post('https://ddic.hgsinteractive.com/resumeupload-savedata', formData, {
       headers: { 'Content-Type': 'multipart/form-data' },
     })
     .then((res) => {
       console.log('SUCCESS:', res.data);
       alert('Application submitted successfully!');
-      e.target.reset();  // form reset
-      setFile(null);
+      e.target.reset();  // Reset form after submission
+      setFile(null);     // Clear file state
     })
     .catch((err) => {
       console.error('ERROR:', err);
@@ -63,7 +70,8 @@ const ResumeForm = ({ jobId }) => {
     <div className="col-lg-12 p-4 p-sm-5 grey-bg inner-form">
       <h4>Submit Your Application</h4>
       <hr className="pt-0 mt-0 pb-1 mb-3" />
-      <form onSubmit={handleSubmit} noValidate>
+      {/* <form onSubmit={handleSubmit} noValidate> */}
+      <form onSubmit={handleSubmit}>
         <div className="row">
 
           <div className="col-sm-6">
@@ -143,12 +151,7 @@ const ResumeForm = ({ jobId }) => {
           </div>
 
           <div className="col-sm-12 mt-3">
-            <BtnSecondary
-              type="submit"
-              className="btn btn-secondary"
-              label={isSubmitting ? "Submitting..." : "Submit"}
-              disabled={isSubmitting}
-            />
+              <button type="submit" className="btn-secondary arrow">Submit</button>
           </div>
 
         </div>

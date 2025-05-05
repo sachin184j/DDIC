@@ -63,7 +63,7 @@ const CareerDetail = () => {
 
             <div className="col-lg-6 pt-4">
               {/* Resume Form */}
-              <ResumeForm jobId={jobData?.id} />
+              <ResumeForm/>
             </div>
           </div>
         </div>
